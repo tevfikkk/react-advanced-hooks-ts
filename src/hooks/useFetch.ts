@@ -1,9 +1,15 @@
 import { useState, useEffect } from 'react'
 
+type data = {
+  id: number
+  title: string
+  body: string
+}
+
 const useFetch = (url: string, options: any) => {
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
-  const [data, setData] = useState(null)
+  const [error, setError] = useState<{ message: string }>()
+  const [data, setData] = useState<data[]>()
 
   useEffect(() => {
     const fetchData = async () => {
