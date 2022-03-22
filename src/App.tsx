@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import UseCallBackExample from './components/UseCallBackExample'
+import CustomHookExample1 from './components/CustomHookExample1'
 
 const App: React.FC = () => {
   return (
     <div>
       <h1>Hello</h1>
-      <UseCallBackExample />
+      <CustomHookExample1 />
     </div>
   )
 }
